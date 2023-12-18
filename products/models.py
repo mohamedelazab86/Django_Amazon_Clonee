@@ -18,7 +18,7 @@ class Product(models.Model):
     name=models.CharField(max_length=120,verbose_name=_('name_product'))
     flag=models.CharField(_('flag'),max_length=50,choices=flag_type)
     price=models.DecimalField('price',max_digits=6, decimal_places=2)
-    image=models.ImageField(upload_to='photo_product/%y-%m-%d',verbose_name=_('image'))
+    image=models.ImageField(upload_to='photo_product',verbose_name=_('image'))
     sku=models.IntegerField(_('sku'),unique=True )
     subtitle=models.TextField(_('subtitle'),max_length=5000)
     description=models.TextField(_('descriptions'),max_length=50000)
